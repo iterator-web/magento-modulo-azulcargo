@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+      <modules>
+          <Iterator_AzulCargo>
+              <active>true</active>
+              <codePool>local</codePool>
+          </Iterator_AzulCargo>
+      </modules>
+</config>
