@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <carriers>
+            <groups>
+                <azulcargo translate="label">
+                    <label>Azul Cargo Express</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        <fields>
+                            <active translate="label">
+                                <label>Habilitar</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>0</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </active>
+                            <ambiente translate="label">
+                                <label>Ambiente</label>
+                                <frontend_type>select</frontend_type>
+                                <source_model>azulcargo/adminhtml_ambiente</source_model>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                                <depends>
+                                    <active>1</active>
+                                </depends>
+                            </ambiente>
+                            <title translate="label">
+                                <label>Nome Exibido</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>2</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </title>
+                            <email translate="label">
+                                <label>Email</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>3</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </email>
+                            <password translate="label">
+                                <label>Senha</label>
+                                <frontend_type>password</frontend_type>
+                                <sort_order>4</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </password>
+                            <access_token translate="label">
+                                <label>Token de Acesso</label>
+                                <frontend_type>password</frontend_type>
+                                <sort_order>5</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                                <comment>
+                                <![CDATA[
+                                    <script type="text/javascript">
+                                        document.getElementById("row_carriers_azulcargo_access_token").hide();
+                                    </script>
+                                ]]>
+                                </comment>
+                            </access_token>
+                        </fields>
+                </azulcargo>
+            </groups>
+        </carriers>
+    </sections>
+</config>
