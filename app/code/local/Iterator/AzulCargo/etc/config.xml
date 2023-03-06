@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Iterator_AzulCargo>
+            <version>1.0.0</version>
+        </Iterator_AzulCargo>
+    </modules>
+    
+    <global>
+        <models>
+            <azulcargo>
+                <class>Iterator_AzulCargo_Model</class>
+            </azulcargo>
+        </models>
+        <helpers>
+            <azulcargo>
+                <class>Iterator_AzulCargo_Helper</class>
+            </azulcargo>
+        </helpers>
+        <sales>
+            <shipping>
+                <carriers>
+                    <azulcargo>
+                        <class>Iterator_AzulCargo_Model_Carrier_AzulCargoMethod</class>
+                    </azulcargo>
+                </carriers>
+            </shipping>
+        </sales>
+    </global>
+    
+    <default>
+        <carriers>
+            <azulcargo>
+                <model>Iterator_AzulCargo_Model_Carrier_AzulCargoMethod</model>
+                <active>1</active>
+                <title>Azul Cargo Express</title>
+            </azulcargo>
+        </carriers>
+    </default>
+	
+</config>
