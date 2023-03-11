@@ -35,8 +35,8 @@ class Iterator_AzulCargo_Helper_IntegradorHelper extends Mage_Core_Helper_Abstra
     public function getCotacao($arrayCotacao) {
         if($this->checkToken) {
             $this->setAccessToken();
-            unset($arrayCotacao['AccessToken']);
-            $arrayCotacao['AccessToken'] = $this->accessToken;
+            unset($arrayCotacao['Token']);
+            $arrayCotacao['Token'] = $this->accessToken;
         }
         $urlApi = $this->getUrlApi();
         $curl = curl_init();
@@ -116,8 +116,8 @@ class Iterator_AzulCargo_Helper_IntegradorHelper extends Mage_Core_Helper_Abstra
 
     private function getDadosConexao() {
         $dadosConexao = array(
-            'email' => Mage::getStoreConfig('carriers/azulcargo/email'),
-            'password' => Mage::getStoreConfig('carriers/azulcargo/password')
+            'Email' => Mage::getStoreConfig('carriers/azulcargo/email'),
+            'Senha' => Mage::getStoreConfig('carriers/azulcargo/password')
         );
         return json_encode($dadosConexao);
     }
