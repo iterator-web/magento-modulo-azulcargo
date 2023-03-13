@@ -248,6 +248,9 @@ class Iterator_AzulCargo_Model_Carrier_AzulCargoMethod
         $azulCargoReturn = $this->getAzulCargoReturn();
         if(!$azulCargoReturn['HasErrors']) {
             foreach($azulCargoReturn['Value'] as $azulCargoService) {
+                if($azulCargoService['NomeServico'] === 'AMANHA') {
+                    continue;
+                }
                 $this->_appendShippingReturn($azulCargoService);
             }
         } else {
@@ -352,7 +355,7 @@ class Iterator_AzulCargo_Model_Carrier_AzulCargoMethod
 
         $shippingCost  = $shippingPrice;
 
-        $method->setMethodTitle($this->getConfigData('title').' ('.$shippingMethod.') - '.' Em Média '.$dateDelivery.' dia(s)');
+        $method->setMethodTitle($this->getConfigData('title').' ('.$shippingMethod.') - '.' Em Média '.$dateDelivery.' dia(s) + 15 dia(s) Separação e Procedimento Interno');
 
         $method->setPrice($shippingPrice);
         $method->setCost($shippingCost);
